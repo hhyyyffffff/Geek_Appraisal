@@ -8,9 +8,6 @@ int main(int argc, char *argv[]) {
 	printf("Article length is: %dByte\n", length);
 	return 0;
 }
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
 
 //查找结点i的父结点,通过递归得到结点到根的长度
 int findParent(int i,int huffman[][4],int n);
@@ -115,12 +112,12 @@ void huffmanTree(int w[],int huffman[][4],int n)
         i1=ii[0];
         i2=ii[1];
      
-        huffman[i][3]=w[i1]+w[i2];
+       
         huffman[i][1]=i1;
         huffman[i][2]=i2;
-        huffman[i1][3]=i;
-        huffman[i2][3]=i;
-        
+        huffman[i1][0]=i;
+        huffman[i2][0]=i;
+        huffman[i][3]=huffman[i1][3]+huffman[i2][3];
     }
 }
 
