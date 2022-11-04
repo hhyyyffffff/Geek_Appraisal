@@ -1,14 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "article.h"
-
-int main(int argc, char *argv[]) {
-	int length = strlen(article_string);
-	printf("Article length is: %dByte\n", length);
-	return 0;
-}
-
 //查找结点i的父结点,通过递归得到结点到根的长度
 int findParent(int i,int huffman[][4],int n);
 //根据初始权重构建哈夫曼树
